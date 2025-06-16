@@ -1,0 +1,671 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #484848;
+  box-sizing: border-box;
+}
+
+body > * {
+  grid-column: 2/-2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1 {
+  font-family: "Ropa Sans", sans-serif;
+  color: #666666;
+  font-size: 3rem;
+}
+
+.work-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "Ropa Sans", sans-serif;
+  color: #484848;
+  font-size: 2.2rem;
+}
+
+/* 基本設定終わり
+------------------------------------------------------------*/
+/* 共通設定終わり
+------------------------------------------------------------*/
+/*------------------------------- TOPページ -------------------------------------*/
+/*------------------------------- TOPページ -------------------------------------*/
+#header {
+  grid-column: 2/-2;
+  grid-row: 1/2;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
+}
+#header #header-sp {
+  padding: 20px 6%;
+  position: fixed;
+  width: 100%;
+}
+#header #header-sp ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #header-sp ul #title {
+  font-family: "Ropa Sans", sans-serif;
+  color: #484848;
+  line-height: 1;
+}
+#header #header-sp ul #title .title-upper {
+  font-size: 1.8rem;
+}
+#header #header-sp ul #title .title-lower {
+  font-size: 2.2rem;
+}
+#header #header-sp ul #hamburger-icon {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 100;
+}
+#header #header-sp ul #hamburger-icon .line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #484848;
+  transition: transform 0.3s;
+}
+#header #header-sp ul #hamburger-icon .line1 {
+  top: 0;
+}
+#header #header-sp ul #hamburger-icon .line1.active {
+  transform: translateY(10px) rotate(45deg);
+  background-color: #484848;
+  z-index: 101;
+}
+#header #header-sp ul #hamburger-icon .line2 {
+  top: 10px;
+}
+#header #header-sp ul #hamburger-icon .line2.active {
+  transform: scaleX(0);
+}
+#header #header-sp ul #hamburger-icon .line3 {
+  top: 20px;
+}
+#header #header-sp ul #hamburger-icon .line3.active {
+  transform: translateY(-10px) rotate(135deg);
+  background-color: #484848;
+  z-index: 101;
+}
+#header #header-sp #menu-toggle-sp {
+  width: 30%;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  display: none;
+}
+#header #header-sp #menu-toggle-sp #nav-sp {
+  text-align: right;
+  margin: 100px 20% 0 0;
+  display: block;
+}
+#header #header-sp #menu-toggle-sp #nav-sp li {
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding-bottom: 40px;
+  color: #484848;
+}
+#header #header-sp #menu-toggle-sp #nav-sp li:last-child {
+  padding-bottom: 0;
+}
+#header #header-sp .header-bg-color {
+  background-color: rgba(255, 239, 249, 0.9);
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  z-index: -1;
+}
+
+#top-main {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  margin: 50px 0 0 0;
+}
+#top-main #graphic,
+#top-main #web {
+  margin-top: -130px;
+  padding-top: 130px;
+}
+#top-main #graphic .main-cat-name,
+#top-main #web .main-cat-name {
+  font-family: "Ropa Sans", sans-serif;
+  color: #484848;
+  font-size: 4rem;
+  line-height: 1;
+  padding: 0 0 0 15%;
+  margin-bottom: 15px;
+}
+#top-main #graphic #sub-cat,
+#top-main #web #sub-cat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+#top-main #graphic #sub-cat .sub-cat-name,
+#top-main #web #sub-cat .sub-cat-name {
+  max-width: 15%;
+}
+#top-main #graphic #sub-cat .sub-cat-name .sub-direction,
+#top-main #graphic #sub-cat .sub-cat-name .sub-design,
+#top-main #graphic #sub-cat .sub-cat-name .sub-design-coding,
+#top-main #web #sub-cat .sub-cat-name .sub-direction,
+#top-main #web #sub-cat .sub-cat-name .sub-design,
+#top-main #web #sub-cat .sub-cat-name .sub-design-coding {
+  font-family: "Neuton", serif;
+  color: #FF00B2;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  margin: -23px 0 0 35%;
+  font-size: 1.5rem;
+  position: relative;
+}
+#top-main #graphic #sub-cat .sub-cat-name .sub-direction span,
+#top-main #graphic #sub-cat .sub-cat-name .sub-design span,
+#top-main #graphic #sub-cat .sub-cat-name .sub-design-coding span,
+#top-main #web #sub-cat .sub-cat-name .sub-direction span,
+#top-main #web #sub-cat .sub-cat-name .sub-design span,
+#top-main #web #sub-cat .sub-cat-name .sub-design-coding span {
+  margin: 0 4px;
+}
+#top-main #graphic #sub-cat .sub-cat-name .sub-direction::after,
+#top-main #graphic #sub-cat .sub-cat-name .sub-design::after,
+#top-main #graphic #sub-cat .sub-cat-name .sub-design-coding::after,
+#top-main #web #sub-cat .sub-cat-name .sub-direction::after,
+#top-main #web #sub-cat .sub-cat-name .sub-design::after,
+#top-main #web #sub-cat .sub-cat-name .sub-design-coding::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: #FF00B2;
+}
+#top-main #graphic #sub-cat .sub-cat-name .sub-direction:after,
+#top-main #web #sub-cat .sub-cat-name .sub-direction:after {
+  margin-left: 60px;
+}
+#top-main #graphic #sub-cat .sub-cat-name .sub-design:after,
+#top-main #web #sub-cat .sub-cat-name .sub-design:after {
+  margin-left: 45px;
+}
+#top-main #graphic #sub-cat .sub-cat-name .sub-design-coding:after,
+#top-main #web #sub-cat .sub-cat-name .sub-design-coding:after {
+  margin-left: 100px;
+}
+#top-main #graphic #sub-cat .works,
+#top-main #web #sub-cat .works {
+  max-width: 85%;
+}
+#top-main #graphic #sub-cat .works .work,
+#top-main #web #sub-cat .works .work {
+  margin-bottom: 30px;
+}
+#top-main #graphic #sub-cat .works .work a .work-img,
+#top-main #web #sub-cat .works .work a .work-img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 6px;
+  border: 1px solid #efefef;
+}
+#top-main #graphic #sub-cat .works .work a .work-name,
+#top-main #web #sub-cat .works .work a .work-name {
+  color: #484848;
+  font-size: 1.4rem;
+  line-height: 1;
+  display: inline;
+}
+#top-main #web {
+  margin-top: -130px;
+  padding-top: 130px;
+}
+
+footer {
+  grid-row: 5/6;
+  color: #484848;
+  padding: 40px 15%;
+  background-color: #EFEFEF;
+}
+footer #info h3 {
+  font-family: "Ropa Sans", sans-serif;
+  color: #484848;
+  font-size: 2.2rem;
+}
+footer #info .about .name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 30px 0 10px 0;
+}
+footer #info .about .about-desc {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  color: #484848;
+}
+footer #info .skill .skill-table {
+  font-size: 1.4rem;
+  color: #484848;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+footer #info .skill .skill-table tr th {
+  width: 60%;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #484848;
+}
+footer #info .skill .skill-table tr td {
+  width: 40%;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #484848;
+}
+footer small {
+  display: block;
+  text-align: center;
+}
+
+/* SP(max-width:1024px)のみの設定 
+------------------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+  #header-pc,
+  #about-pc,
+  #skill-pc {
+    display: none;
+  }
+}
+/* PC(min-width:1025px)の設定 
+--------------------------------------------*/
+@media screen and (min-width: 1025px) {
+  body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 250px auto;
+    padding: 0 3%;
+  }
+  body #header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    max-width: 250px;
+  }
+  body #header #header-pc {
+    background-color: rgba(255, 239, 249, 0.9);
+    margin: 0 30px 0 0;
+  }
+  body #header #header-pc #title {
+    font-family: "Ropa Sans", sans-serif;
+    color: #484848;
+    line-height: 1.1;
+    text-align: center;
+    padding: 30px 0;
+  }
+  body #header #header-pc #title .title-name {
+    margin-bottom: 30px;
+  }
+  body #header #header-pc #title .title-name .title-upper {
+    font-size: 2rem;
+    margin-bottom: 2px;
+  }
+  body #header #header-pc #title .title-name .title-lower {
+    font-size: 2.7rem;
+  }
+  body #header #header-pc #title #nav-pc ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  body #header #header-pc #title #nav-pc ul li {
+    font-family: "Ropa Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    border-right: 1px solid #484848;
+    padding-right: 8px;
+  }
+  body #header #header-pc #title #nav-pc ul li:last-child {
+    border-right: none;
+    padding-left: 8px;
+    padding-right: 0;
+  }
+  body #header #header-pc #title #nav-pc ul li a:hover {
+    color: #FF0091;
+    border-bottom: 2px solid #FF0091;
+    transition: 0.2s;
+    padding-bottom: 5px;
+  }
+  body #header #header-pc #info {
+    background-color: #EFEFEF;
+    padding: 30px 8%;
+  }
+  body #header #header-pc #info .about .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+  }
+  body #header #header-pc #info .about .about-desc {
+    margin-bottom: 40px;
+    color: #484848;
+  }
+  body #header #header-pc #info .skill .skill-table {
+    font-size: 1.3rem;
+    color: #484848;
+    width: 100%;
+    text-align: left;
+  }
+  body #header #header-pc #info .skill .skill-table tr th {
+    width: 60%;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #484848;
+  }
+  body #header #header-pc #info .skill .skill-table tr td {
+    width: 40%;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #484848;
+  }
+  body #top-main {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin: 100px 0 0 0;
+  }
+  body #top-main #graphic,
+  body #top-main #web {
+    margin-top: -30px;
+    padding-top: 30px;
+  }
+  body #top-main #graphic .main-cat-name,
+  body #top-main #web .main-cat-name {
+    padding: 0 0 0 6%;
+    margin-bottom: 5px;
+  }
+  body #top-main #graphic #sub-cat,
+  body #top-main #web #sub-cat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  body #top-main #graphic #sub-cat .sub-cat-name,
+  body #top-main #web #sub-cat .sub-cat-name {
+    max-width: 8%;
+  }
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-direction,
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design,
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design-coding,
+  body #top-main #web #sub-cat .sub-cat-name .sub-direction,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design-coding {
+    font-family: "Neuton", serif;
+    color: #FF00B2;
+    transform: rotate(90deg);
+    transform-origin: left bottom;
+    margin: -23px 0 0 35%;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-direction span,
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design span,
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design-coding span,
+  body #top-main #web #sub-cat .sub-cat-name .sub-direction span,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design span,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design-coding span {
+    margin: 0 4px;
+  }
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-direction::after,
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design::after,
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design-coding::after,
+  body #top-main #web #sub-cat .sub-cat-name .sub-direction::after,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design::after,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design-coding::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background-color: #FF00B2;
+  }
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-direction:after,
+  body #top-main #web #sub-cat .sub-cat-name .sub-direction:after {
+    margin-left: 60px;
+  }
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design:after,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design:after {
+    margin-left: 45px;
+  }
+  body #top-main #graphic #sub-cat .sub-cat-name .sub-design-coding:after,
+  body #top-main #web #sub-cat .sub-cat-name .sub-design-coding:after {
+    margin-left: 100px;
+  }
+  body #top-main #graphic #sub-cat .works,
+  body #top-main #web #sub-cat .works {
+    max-width: 94%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px 10px;
+  }
+  body #top-main #graphic #sub-cat .works .work,
+  body #top-main #web #sub-cat .works .work {
+    margin-bottom: 0;
+  }
+  body #top-main #graphic #sub-cat .works .work a .overflow,
+  body #top-main #web #sub-cat .works .work a .overflow {
+    overflow: hidden;
+  }
+  body #top-main #graphic #sub-cat .works .work a .overflow .work-img,
+  body #top-main #web #sub-cat .works .work a .overflow .work-img {
+    max-width: 100%;
+    height: auto;
+    transition-duration: 0.5s; /*変化の時間*/
+  }
+  body #top-main #graphic #sub-cat .works .work a .overflow .work-img:hover,
+  body #top-main #web #sub-cat .works .work a .overflow .work-img:hover {
+    transform: scale(1.1, 1.1); /*画像の拡大*/
+  }
+  body #top-main #graphic #sub-cat .works .work a .work-name,
+  body #top-main #web #sub-cat .works .work a .work-name {
+    color: #484848;
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  body #header-sp,
+  body #about-sp,
+  body #skill-sp,
+  body footer {
+    display: none;
+  }
+} /* PC(min-width:1025px)の設定 終了------------------------------------------------------------*/
+/*------------------------------- TOPページ終わり -------------------------------------*/
+/*------------------------------- TOPページ終わり -------------------------------------*/
+/*------------------------------- WORKSページ -------------------------------------*/
+/*------------------------------- WORKSページ -------------------------------------*/
+#body-works #each-work {
+  margin: 40px 0;
+  padding: 0 6%;
+}
+#body-works #each-work .each-work-info {
+  margin-bottom: 30px;
+}
+#body-works #each-work .each-work-info .work-title-desc {
+  margin-bottom: 15px;
+}
+#body-works #each-work .each-work-info .work-territory-media {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding: 15px 0;
+}
+#body-works #each-work .each-work-info .work-territory-media p span {
+  font-weight: 600;
+}
+#body-works #each-work .each-work-info .work-territory-media .territory {
+  margin-bottom: 10px;
+}
+#body-works #each-work .each-work-image .url {
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: block;
+}
+#body-works #each-work .each-work-image .url:after {
+  font: var(--fa-font-solid);
+  font-size: 1.1rem;
+  content: "\f08e";
+  padding-right: 2px;
+}
+#body-works #each-work .each-work-image .url:hover {
+  color: #FF0091;
+  transition: 0.3s;
+}
+#body-works #each-work .each-work-image .work-image-web .work-image-web-pc, #body-works #each-work .each-work-image .work-image-web .work-image-web-sp {
+  width: 100%;
+  height: 100%;
+}
+#body-works #each-work .each-work-image .work-image-web .work-image-web-pc p, #body-works #each-work .each-work-image .work-image-web .work-image-web-sp p {
+  font-size: 1.2rem;
+}
+#body-works #each-work .each-work-image .work-image-web .work-image-web-pc img, #body-works #each-work .each-work-image .work-image-web .work-image-web-sp img {
+  width: 100%;
+  border: 1px solid #dadada;
+  margin-bottom: 30px;
+}
+#body-works #each-work .each-work-image .work-image-graphic p {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+#body-works #each-work .each-work-image .work-image-graphic .work-image-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
+}
+#body-works #each-work .each-work-image .work-image-graphic .work-image-media img {
+  width: 100%;
+  border: 1px solid #dadada;
+  margin-bottom: 20px;
+}
+
+/* PC(min-width:1025px)の設定 
+--------------------------------------------*/
+@media screen and (min-width: 1025px) {
+  #body-works {
+    padding: 0 3%;
+  }
+  #body-works #each-work {
+    margin: 50px 0;
+    padding: 0 0 0 1%;
+  }
+  #body-works #each-work .each-work-info {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 50px;
+  }
+  #body-works #each-work .each-work-info .work-title-desc {
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  #body-works #each-work .each-work-info .work-territory-media {
+    border-top: initial;
+    border-bottom: initial;
+    padding: 0;
+    width: 50%;
+  }
+  #body-works #each-work .each-work-info .work-territory-media p span {
+    font-weight: 600;
+  }
+  #body-works #each-work .each-work-info .work-territory-media .territory {
+    margin-bottom: 15px;
+  }
+  #body-works #each-work .each-work-image {
+    margin-bottom: 50px;
+  }
+  #body-works #each-work .each-work-image .url {
+    font-size: 1.2rem;
+    color: #999;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: block;
+  }
+  #body-works #each-work .each-work-image .url:after {
+    font: var(--fa-font-solid);
+    font-size: 1.1rem;
+    content: "\f08e";
+    padding-right: 2px;
+  }
+  #body-works #each-work .each-work-image .url:hover {
+    color: #FF0091;
+    transition: 0.3s;
+  }
+  #body-works #each-work .each-work-image .work-image-web {
+    display: flex;
+    justify-content: space-between;
+  }
+  #body-works #each-work .each-work-image .work-image-web .work-image-web-sp {
+    width: 100%;
+    height: 100%;
+  }
+  #body-works #each-work .each-work-image .work-image-web .work-image-web-sp p {
+    font-size: 1.2rem;
+  }
+  #body-works #each-work .each-work-image .work-image-web .work-image-web-sp img {
+    width: 100%;
+    border: 1px solid #dadada;
+  }
+  #body-works #each-work .each-work-image .work-image-web .work-image-web-pc {
+    width: 61%;
+  }
+  #body-works #each-work .each-work-image .work-image-web .work-image-web-sp {
+    width: 35%;
+  }
+  #body-works #each-work .each-work-image .work-image-graphic p {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+  }
+  #body-works #each-work .each-work-image .work-image-graphic .work-image-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+  #body-works #each-work .each-work-image .work-image-graphic .work-image-media img {
+    width: 49%;
+    border: 1px solid #dadada;
+    margin-bottom: 20px;
+  }
+}
+/* SP(max-width:1024px)のみの設定 
+------------------------------------------------------------*//*# sourceMappingURL=style.css.map */

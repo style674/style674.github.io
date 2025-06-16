@@ -1,0 +1,743 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+// colors
+$pink: #FF0091;
+$gray: #484848;
+$bg-gray: #EFEFEF;
+
+body{
+    font-family: "Zen Kaku Gothic New", sans-serif,  sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $gray;
+    box-sizing: border-box;
+    
+}
+
+body > * {
+    grid-column:2 / -2;
+}
+
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    vertical-align:top;    
+}
+
+h1{
+    font-family: 'Ropa Sans', sans-serif;
+        color:#666666;
+        font-size:3rem;
+}  //Web, Graphic, About
+
+.work-title{
+    font-size:2.2rem;
+    font-weight:bold;
+    margin-bottom:10px;
+} //h2 各制作物のタイトル
+
+
+
+h3{
+    font-family: 'Ropa Sans', sans-serif;
+    color:$gray;
+    font-size:2.2rem;
+}
+
+
+/* 基本設定終わり
+------------------------------------------------------------*/
+
+
+
+
+/* 共通設定終わり
+------------------------------------------------------------*/
+
+
+/*------------------------------- TOPページ -------------------------------------*/
+/*------------------------------- TOPページ -------------------------------------*/
+#header{
+    grid-column:2 / -2;
+    grid-row:1 / 2;
+    z-index:1;
+    width:100%;
+    height:80px;
+    #header-sp{
+        padding:20px 6%;
+        position:fixed;
+        width:100%;
+        ul{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            #title{
+                font-family: 'Ropa Sans', sans-serif;
+                color:$gray;
+                line-height:1;
+                .title-upper{
+                    font-size:1.8rem;
+                }
+                .title-lower{
+                    font-size:2.2rem;
+                }
+            }
+            #hamburger-icon{
+                position:relative;
+                width:30px;
+                height:25px;
+                cursor:pointer;
+                z-index:100;
+                .line{
+                    position:absolute;
+                	width: 30px;
+                	height: 2px;
+                	background-color: $gray;
+                	transition:transform .3s;
+                }
+                .line1 {
+                	top: 0;
+                }
+                .line1.active{
+                    transform: translateY(10px) rotate(45deg);
+                    background-color: $gray;
+                    z-index:101;
+                }
+                .line2 {
+                	top: 10px;
+                }
+                .line2.active{
+                    transform:scaleX(0);
+                }
+                .line3 {
+                	top: 20px;
+                }
+                .line3.active{
+                    transform: translateY(-10px) rotate(135deg);
+                    background-color: $gray;
+                    z-index:101;
+                }
+            }//ハンバーガーアイコン終わり
+        }  //ul 終わり
+        #menu-toggle-sp{
+            width:30%;
+            height:300px;
+            background-color:rgba(255, 255, 255, 0.8);
+            position:fixed;
+            top:0;
+            right:0;
+            z-index:50;
+            display:none;
+            #nav-sp{
+                text-align:right;
+                margin:100px 20% 0 0;
+                display:block;
+                li{
+                    font-family: 'Ropa Sans', sans-serif;
+                    font-size:1.8rem;
+                    font-weight:300;
+                    padding-bottom:40px;
+                    color:$gray;
+                    &:last-child{
+                        padding-bottom:0;    
+                    }
+                }
+            }
+        } //トグル終了
+        .header-bg-color{
+            background-color:rgba(255, 239, 249, 0.9);
+            width:100%;
+            height:80px;
+            position:absolute;
+            top:0;
+            left:10%;
+            z-index:-1;
+        } //.header-bg-color 終わり
+    } //#header-sp 終わり
+} //#header 終わり
+
+#top-main{
+    grid-row:2 / 3;
+    grid-column:1 / -1;
+    margin:50px 0 0 0;
+    #graphic,
+    #web{
+        margin-top:-130px;
+        padding-top:130px; //固定ページのスクロールズレの回避
+        .main-cat-name{
+            font-family: 'Ropa Sans', sans-serif;
+            color:$gray;
+            font-size:4rem;
+            line-height: 1;
+            padding:0 0 0 15%;
+            margin-bottom:15px;
+        }
+        #sub-cat{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:50px;
+            .sub-cat-name{
+                max-width:15%;
+                .sub-direction,
+                .sub-design,
+                .sub-design-coding{
+                    font-family: 'Neuton', serif;
+                    color:#FF00B2;
+                    transform:rotate(90deg);
+                    transform-origin:left bottom;
+                    margin:-23px 0 0 35%;
+                    font-size:1.5rem;
+                    position: relative;
+                    span{
+                            margin:0 4px;
+                        }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 55%;
+                        display: inline-block;
+                        width: 40px;
+                        height: 1px;
+                        background-color: #FF00B2;
+                    }
+                } //h3 全体設定終わり
+                .sub-direction:after{
+                    margin-left:60px;
+                }
+                .sub-design:after{
+                    margin-left:45px;
+                }
+                .sub-design-coding:after{
+                    margin-left:100px;
+                } //h3 個別設定終わり
+            } //.sub-cat-name 終わり
+            .works{
+                max-width:85%;
+                .work{
+                    margin-bottom:30px;
+                    a{
+                        .work-img{
+                            width:100%;
+                            height:auto;
+                            overflow:hidden;
+                            margin-bottom: 6px;
+                            border: 1px solid #efefef;
+                        }
+                        .work-name{
+                            color:$gray;
+                            font-size:1.4rem;
+                            line-height:1;
+                            display: inline;
+                        }   
+                    }
+                } //.work 終わり
+            } //.works 終わり
+        } //#sub-cat 終わり
+    } //#graphic 終わり
+    #web{
+        margin-top:-130px;
+        padding-top:130px;
+    } //#web 終わり
+} //#top-main 終わり
+
+
+footer{
+    grid-row:5 / 6;
+    color:$gray;
+    padding:40px 15%;
+    background-color: $bg-gray;
+    #info{
+        h3{
+            font-family: 'Ropa Sans', sans-serif;
+            color:$gray;
+            font-size:2.2rem;
+        }
+        .about{
+            .name{
+                font-size:1.4rem;
+                font-weight:bold;
+                margin:30px 0 10px 0;
+            }
+            .about-desc{
+                margin-bottom:30px;
+                font-size:1.4rem;
+                color:$gray;
+            }
+        }
+        .skill{
+            .skill-table{
+                font-size:1.4rem;
+                color:$gray;
+                width:100%;
+                text-align:left;
+                margin-bottom: 40px;
+                tr{
+                    th{
+                        width:60%;
+                        padding:10px 0 10px 0;
+                        border-bottom:1px solid $gray;
+                    }
+                    td{
+                        width:40%;
+                        padding:10px 0 10px 0;
+                        border-bottom:1px solid $gray;
+                    }
+                }
+            }
+        } //.skill
+    } //.info
+    small{
+        display: block;
+        text-align:center;
+    }
+}
+
+
+
+
+/* SP(max-width:1024px)のみの設定 
+------------------------------------------------------------*/
+@media screen and (max-width:1024px){
+    #header-pc,
+    #about-pc,
+    #skill-pc{
+        display:none;
+    }
+}
+
+
+
+
+/* PC(min-width:1025px)の設定 
+--------------------------------------------*/
+@media screen and (min-width:1025px){
+    body{
+        display:grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows:250px auto;
+        padding:0 3%;
+        #header{
+            grid-column:1 / 2;   
+            grid-row:1 / 2;
+            max-width:250px;
+            #header-pc{
+                background-color:rgba(255, 239, 249, 0.9);
+                margin:0 30px 0 0;
+                
+                #title{
+                    font-family: 'Ropa Sans', sans-serif;
+                    color:$gray;
+                    line-height:1.1;
+                    text-align:center;
+                    padding: 30px 0;
+                    
+                    .title-name{
+                        margin-bottom: 30px;
+                        .title-upper{
+                            font-size:2rem;
+                            margin-bottom: 2px;
+                        }
+                        .title-lower{
+                            font-size:2.7rem;
+                        }
+                    }
+                    
+                    #nav-pc{
+                        ul{
+                            display:flex;
+                            justify-content:center;
+                            margin-bottom:30px;
+                            li{
+                                font-family: 'Ropa Sans', sans-serif;
+                                font-size:1.8rem;
+                                font-weight:300;
+                                border-right:1px solid $gray;
+                                padding-right:8px;
+                                &:last-child{
+                                    border-right:none;
+                                    padding-left:8px;
+                                    padding-right:0;
+                                }
+                                a:hover{
+                                    color:$pink;
+                                    border-bottom:2px solid $pink;
+                                    transition: 0.2s;
+                                    padding-bottom:5px;
+                                }
+                            } 
+                        }
+                    } //#nav-pc
+                    small{
+
+                    }
+                } //#title終わり 
+                #info{
+                    background-color: $bg-gray;
+                    padding: 30px 8%;
+                    .about{
+                        .name{
+                            font-size:1.5rem;
+                            font-weight:bold;
+                            margin:30px 0 10px 0;
+                        }
+                        .about-desc{
+                            margin-bottom:40px;
+                            color:$gray;
+                        }
+                    } //.about
+                    .skill{
+                        .skill-table{
+                            font-size:1.3rem;
+                            color:$gray;
+                            width:100%;
+                            text-align:left;
+                            tr{
+                                th{
+                                    width:60%;
+                                    padding:10px 0 10px 0;
+                                    border-bottom:1px solid $gray;
+                                }
+                                td{
+                                    width:40%;
+                                    padding:10px 0 10px 0;
+                                    border-bottom:1px solid $gray;
+                                }
+                            }
+                        }
+                    } //.skill
+                } //#info
+            } //.header-pc終わり
+        } //.#header
+        
+        
+        
+        #top-main{
+            grid-column:2 / 3;   
+            grid-row:1 / 3;
+            margin:100px 0 0 0;
+            #graphic,
+            #web{
+                margin-top:-30px;
+                padding-top:30px; //固定ページのスクロールズレの回避
+                .main-cat-name{
+                    padding: 0 0 0 6%;
+                    margin-bottom:5px;
+                }
+                #sub-cat{
+                    display:flex;
+                    justify-content:space-between;
+                    margin-bottom:50px;
+                    .sub-cat-name{
+                        max-width:8%;
+                        .sub-direction,
+                        .sub-design,
+                        .sub-design-coding{
+                            font-family: 'Neuton', serif;
+                            color:#FF00B2;
+                            transform:rotate(90deg);
+                            transform-origin:left bottom;
+                            margin:-23px 0 0 35%;
+                            font-size:1.5rem;
+                            position: relative;
+                            span{
+                                    margin:0 4px;
+                                }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                top: 55%;
+                                display: inline-block;
+                                width: 40px;
+                                height: 1px;
+                                background-color: #FF00B2;
+                            }
+                        } //h3 全体設定終わり
+                        .sub-direction:after{
+                            margin-left:60px;
+                        }
+                        .sub-design:after{
+                            margin-left:45px;
+                        }
+                        .sub-design-coding:after{
+                            margin-left:100px;
+                        } //h3 個別設定終わり
+                    } //.sub-cat-name 終わり
+                    .works{
+                        max-width:94%;
+                        display:grid;
+                        grid-template-columns:repeat(3, 1fr);
+                        grid-gap:25px 10px;
+                        .work{
+                            margin-bottom:0;
+                            a{
+                                .overflow{
+                                    overflow:hidden;
+                                    .work-img{
+                                        max-width:100%;
+                                        height:auto;
+                                        transition-duration: 0.5s; /*変化の時間*/
+                                        &:hover{
+                                            transform: scale(1.1,1.1); /*画像の拡大*/
+                                        }
+                                    }
+                                }
+                                .work-name{
+                                    color:$gray;
+                                    font-size:1.3rem;
+                                    line-height:1;
+                                }        
+                            }
+                        } //.work 終わり
+                    } //.works 終わり
+                } //#sub-cat 終わり
+            } //#graphic 終わり
+        }
+        
+        
+        #header-sp,
+        #about-sp,
+        #skill-sp,
+        footer{
+            display:none;
+        }
+    }// #body-top終わり
+    
+} /* PC(min-width:1025px)の設定 終了------------------------------------------------------------*/
+
+
+/*------------------------------- TOPページ終わり -------------------------------------*/
+/*------------------------------- TOPページ終わり -------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------- WORKSページ -------------------------------------*/
+/*------------------------------- WORKSページ -------------------------------------*/
+
+#body-works{
+    #each-work{
+        margin:40px 0;
+        padding: 0 6%;
+        .each-work-info{
+            margin-bottom: 30px;
+            .work-title-desc{
+                margin-bottom: 15px;
+            }
+            .work-territory-media{
+                border-top: 1px solid #999;
+                border-bottom: 1px solid #999;
+                padding: 15px 0;
+                p{
+                    span{
+                        font-weight: 600;
+                    }
+                }
+                .territory{
+                    margin-bottom:10px;
+                }
+                .media{
+
+                }
+            } //.work-territory-media
+        } //.each-work-info
+        .each-work-image{
+            .url{
+                font-size: 1.2rem;
+                color: #999;
+                cursor: pointer;
+                margin-bottom: 15px;
+                display: block;
+                &:after{
+                    font: var(--fa-font-solid);
+                    font-size: 1.1rem;
+                    content:('\f08e');
+                    padding-right: 2px;
+                }
+                &:hover{
+                    color:$pink;
+                    transition: 0.3s ;
+                }
+            } //.url
+            .work-image-web{
+                .work-image-web-pc, .work-image-web-sp{
+                    width: 100%;
+                    height: 100%;
+                    p{
+                        font-size: 1.2rem;
+                    }
+                    img{
+                        width: 100%;
+                        border: 1px solid #dadada;
+                        margin-bottom: 30px;
+                    }
+                }
+            } //.work-image-web
+
+            .work-image-graphic{
+                p{
+                    font-size: 1.2rem;
+                    margin-bottom: 2px;
+                }
+                .work-image-media{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+                    margin-bottom: 40px;
+                    img{
+                        width: 100%;
+                        border: 1px solid #dadada;
+                        margin-bottom: 20px;
+                        
+                    }
+                }
+            } //.work-image-graphic
+
+        } //.each-work-image
+
+        
+
+
+
+
+    } //#each-work
+}
+
+
+
+
+/* PC(min-width:1025px)の設定 
+--------------------------------------------*/
+@media screen and (min-width:1025px){
+    #body-works{
+        padding:0 3%;
+        
+        #each-work{
+            margin:50px 0;
+            padding: 0 0 0 1%;
+            .each-work-info{
+                margin-bottom: 40px;
+                display: flex;
+                gap: 50px;
+                .work-title-desc{
+                    margin-bottom: 15px;
+                    width: 50%;
+                }
+                .work-territory-media{
+                    border-top: initial;
+                    border-bottom: initial;
+                    padding: 0;
+                    width: 50%;
+                    p{
+                        span{
+                            font-weight: 600;
+                        }
+                    }
+                    .territory{
+                        margin-bottom:15px;
+                    }
+                    .media{
+    
+                    }
+                } //.work-territory-media
+            } //.each-work-info
+            .each-work-image{
+                margin-bottom: 50px;
+                .url{
+                    font-size: 1.2rem;
+                    color: #999;
+                    cursor: pointer;
+                    margin-bottom: 15px;
+                    display: block;
+                    &:after{
+                        font: var(--fa-font-solid);
+                        font-size: 1.1rem;
+                        content:('\f08e');
+                        padding-right: 2px;
+                    }
+                    &:hover{
+                        color:$pink;
+                        transition: 0.3s ;
+                    }
+                } //.url
+                .work-image-web{
+                    display: flex;
+                    justify-content: space-between;
+                    .work-image-web-sp{
+                        width: 100%;
+                        height: 100%;
+                        p{
+                            font-size: 1.2rem;
+                        }
+                        img{
+                            width: 100%;
+                            border: 1px solid #dadada;
+                        }
+                    }
+                    .work-image-web-pc{
+                        width: 61%;
+                    }
+                    .work-image-web-sp{
+                        width: 35%;
+                    }
+                } //.work-image-web
+
+                .work-image-graphic{
+                    p{
+                        font-size: 1.2rem;
+                        margin-bottom: 2px;
+                    }
+                    .work-image-media{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        width: 100%;
+                        height: 100%;
+                        margin-bottom: 40px;
+                        img{
+                            width: 49%;
+                            border: 1px solid #dadada;
+                            margin-bottom: 20px;
+                            
+                        }
+                    }
+                } //.work-image-graphic
+
+            } //.each-work-image
+        } 
+
+
+    } //#body-works終わり
+}
+
+
+
+/* SP(max-width:1024px)のみの設定 
+------------------------------------------------------------*/
+@media screen and (max-width:1024px){
+
+}

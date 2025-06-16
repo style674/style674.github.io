@@ -1,11 +1,431 @@
 <!DOCTYPE html>
+
 <html lang="ja">
+    
 <head>
+    
+    <!-- Basic Page Needs ––––––––––––––––––––––––––––––––––––––--––––––––––-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pagesのテスト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hirata Takashi PORTFOLIO</title>
+    <meta name="description" content="現職での制作物を中心にWebとグラフィックの制作実績">
+
+    <!-- 約物半角 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.0/dist/css/yakuhanjp.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- FONT ––––––––––––––––––––––––––––––––––––––--––––––––––-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="destyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>こんにちは</div>
+    <header id="header">
+        <div id="header-sp">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div id="title">
+                            <span class="title-upper">Takashi Hirata</span><br><span class="title-lower">PORTFOLIO</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div id="hamburger-icon">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                </li>
+            </ul>    
+        
+            <nav id="menu-toggle-sp">
+                <ul id="nav-sp">
+                    <li><a href="#web">Web</a></li>
+                    <li><a href="#graphic">Graphic</a></li>
+                    <li><a href="#info">About</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-bg-color"></div>
+        </div>
+        
+        <div id="header-pc">
+            <div id="title">
+                <ul class="title-name"> <!-- flex -->
+                    <li class="title-upper">Takashi HIRATA</li>
+                    <li class="title-lower">PORTFOLIO</li>
+                </ul>
+                <nav id="nav-pc">
+                    <ul>
+                        <li><a href="#web">Web</a></li> 
+                        <li><a href="#graphic">Graphic</a></li> 
+                    </ul>
+                </nav>
+                <small>
+                    ©2024 Takashi Hirata
+                </small>
+            </div>
+            
+            <div id="info">
+                <div class="about">
+                    <h1>About</h1>
+                    <p class="name">平田 隆史</p>
+                    <p class="about-desc">
+                        大学卒業後、創造社デザイン専門学校でグラフィックデザインを学んだ後、スイスホテル南海大阪に入社。<br>
+                        ホテルのサイト管理やランディングページ、SPツールの制作に加え、撮影手配やディレクション、広報業務のサポートまでホテルの宣伝に関する業務に幅広く携わっています。
+                    </p>
+                </div>
+                <div class="skill">
+                    <h3>Skill</h3>
+                    <table class="skill-table">
+                        <tr>
+                            <th>Illustrator</th>
+                            <td>&#9733&#9733&#9733&#9733&#9733</td>
+                        </tr>
+                        <tr>
+                            <th>Photoshop</th>
+                            <td>&#9733&#9733&#9733&#9733&#9734</td>
+                        </tr>
+                        <tr>
+                            <th>Figma</th>
+                            <td>&#9733&#9733&#9733&#9734&#9734</td>
+                        </tr>
+                        <tr>
+                            <th>XD</th>
+                            <td>&#9733&#9733&#9733&#9734&#9734</td>
+                        </tr>
+                        <tr>
+                            <th>HTML / CSS</th>
+                            <td>&#9733&#9733&#9733&#9734&#9734</td>
+                        </tr>
+                        <tr>
+                            <th>WordPress</th>
+                            <td>&#9733&#9733&#9734&#9734&#9734</td>
+                        </tr>
+                        <tr>
+                            <th>Word / Excel</th>
+                            <td>&#9733&#9733&#9733&#9734&#9734</td>
+                        </tr>
+                        <tr>
+                            <th>Mac / Windows OS</th>
+                            <td>&#9733&#9733&#9733&#9733&#9733</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="header-bg-color"></div>
+        </div>
+    </header>
+    
+
+
+<!--mainセクション-->
+    <section id="top-main">
+
+    <!------------WEB------------>
+        <section id="web">
+            <section class="main-cat-name">
+                <h1>Web</h1>    
+            </section>
+            
+            <section id="sub-cat">
+                <section class="sub-cat-name">
+                    <h3 class="sub-design-coding">Design<span>&</span>Coding</h3>    
+                </section> <!--サブカテゴリーの名前 終了-->
+
+                <section class="works">
+
+                    <section class="work">
+                        <a href="works/web_access.html">
+                            <div class="overflow">
+                                <img src="image/Top_Web_access.jpg" class="work-img">
+                            </div>
+                            <p class="work-name">スイスホテル南海大阪 アクセスマップ</p>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/web_swissotel-christmas.html">
+                            <div class="overflow">
+                                <img src="image/Top_Web_Christmas.jpg" class="work-img">
+                            </div>
+                            <p class="work-name">スイスホテル南海大阪 クリスマス2023</p>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/web_20th-anniversary.html">
+                            <div class="overflow">
+                                <img src="image/Top_Web_20th Anniversary.jpg" class="work-img">
+                            </div>
+                            <p class="work-name">スイスホテル南海大阪 20周年記念特設サイト</p>
+                        </a>
+                    </section>
+
+
+                    <section class="work">
+                        <a href="works/web_fastpass.html">
+                            <div class="overflow">
+                                <img src="image/Top_Web_FastPass.jpg" class="work-img">
+                            </div>
+                            <p class="work-name">スイスホテル南海大阪 ファストパス</p>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/web_ambassador.html">
+                            <div class="overflow">
+                                <img src="image/Top_Web_AMbassador.jpg" class="work-img">
+                            </div>
+                            <p class="work-name">スイスホテル南海大阪 AMbassadorプログラム</p>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/web_raku-life.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Web_RakuRaku.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">楽楽生活.net</p>
+                            </div>
+                        </a>
+                    </section>
+                    
+                    <section class="work">
+                        <a href="works/web_cleverlyhome.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Web_Clevary_Home.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">クレバリーホーム新潟</p>
+                            </div>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/web_heybaybooks.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Web_Hey_Bay_Books.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">本屋 平米</p>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="work">
+                        <a href="works/web_roji.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Web_Roji.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">路地写真集 ROJI</p>
+                            </div>
+                        </a>
+                    </section>
+                </section> <!--.works 終了-->
+            </section> <!--サブカテゴリー Design & Coding 終了-->    
+        </section> <!--#web終了-->
+    
+    <!------------Graphic------------>
+        <section id="graphic">
+            <section class="main-cat-name">
+                <h1>Graphic</h1>    
+            </section>
+            
+            <section id="sub-cat">
+                <section class="sub-cat-name">
+                    <h3 class="sub-direction">Direction</h3>    
+                </section> <!--サブカテゴリーの名前 終了-->
+                <section class="works">
+                    
+                    <section class="work">
+                        <a href="works/graphic_swisslevel.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_Swiss_Level.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">ホテル情報誌 SWISS LEVEL</p>
+                            </div>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/graphic_oiswiss.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_oiswiss.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">oiswiss</p>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="work">
+                        <a href="works/graphic_micebook.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_MICE_Book.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">MICEブローシャー</p>
+                            </div>
+                        </a>
+                    </section>
+                </section> <!--.works 終了-->
+            </section> <!--サブカテゴリー Direction 終了-->
+            
+            <section id="sub-cat">
+                <section class="sub-cat-name">
+                    <h3 class="sub-design">Design</h3>
+                </section> <!--サブカテゴリーの名前 終了-->
+                
+                <section class="works">
+
+                    <section class="work">
+                        <a href="works/graphic_swissotel-christmas.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_Christmas.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">スイスホテル南海大阪 クリスマス2023</p>
+                            </div>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/graphic_banquet-plan.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_Banquet_Plan.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">宴会パーティープラン</p>
+                            </div>
+                        </a>
+                    </section>
+
+                    <section class="work">
+                        <a href="works/graphic_entrance-hotel-info-board.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_1F_Entrance.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">ホテル館内案内</p>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="work">
+                        <a href="works/graphic_take-away.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_empress_take_away.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">テイクアウトメニュー フライヤー</p>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="work">
+                        <a href="works/graphic_rainy-special.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_Rainy_Day.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">雨の日割引</p>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="work">
+                        <a href="works/graphic_shaved-ice.html">
+                            <div>
+                                <div class="overflow">
+                                    <img src="image/Top_Graphic_Shaved_Ice.jpg" class="work-img">
+                                </div>
+                                <p class="work-name">かき氷ステーション</p>
+                            </div>
+                        </a>
+                    </section>
+                </section> <!--.works 終了-->
+            </section> <!--サブカテゴリー Design 終了-->
+        </section> <!--#graphic終了-->
+
+    </section>
+<!--mainセクション終了-->
+
+
+
+
+<footer> <!--SPのみ--> 
+    <div id="info">
+        <div class="about">
+            <h1>About</h1>
+            <p class="name">平田 隆史</p>
+            <p class="about-desc">
+                大学卒業後、創造社デザイン専門学校でグラフィックデザインを学んだ後、スイスホテル南海大阪に入社。<br>
+                ホテルのサイト管理やランディングページ、SPツールの制作に加え、撮影手配やディレクション、広報業務のサポートまでホテルの宣伝に関する業務に幅広く携わっています。
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Skill</h3>
+            <table class="skill-table">
+                <tr>
+                    <th>Illustrator</th>
+                    <td>&#9733&#9733&#9733&#9733&#9733</td>
+                </tr>
+                <tr>
+                    <th>Photoshop</th>
+                    <td>&#9733&#9733&#9733&#9733&#9734</td>
+                </tr>
+                <tr>
+                    <th>Figma</th>
+                    <td>&#9733&#9733&#9733&#9734&#9734</td>
+                </tr>
+                <tr>
+                    <th>XD</th>
+                    <td>&#9733&#9733&#9733&#9734&#9734</td>
+                </tr>
+                <tr>
+                    <th>HTML / CSS</th>
+                    <td>&#9733&#9733&#9733&#9734&#9734</td>
+                </tr>
+                <tr>
+                    <th>WordPress</th>
+                    <td>&#9733&#9733&#9734&#9734&#9734</td>
+                </tr>
+                <tr>
+                    <th>Word / Excel</th>
+                    <td>&#9733&#9733&#9733&#9734&#9734</td>
+                </tr>
+                <tr>
+                    <th>Mac / Windows OS</th>
+                    <td>&#9733&#9733&#9733&#9733&#9733</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <small>©2024 Takashi Hirata</small>
+</footer>
+
+
+<!-- jQuery –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- js ––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="js/script.js"></script>
+
 </body>
+    
 </html>
